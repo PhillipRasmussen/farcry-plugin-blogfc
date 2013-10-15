@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 	    var disqus_shortname = '#application.fapi.getConfig("blogfc", "disqusShortname")#';
 	    var disqus_identifier = '#stObj.objectid#';
-	    var disqus_title = '#stObj.title#';
+	    var disqus_title = '#urlEncodedFormat(stObj.title)#';
 	    var disqus_url = '#oEnv.getCanonicalURL()##application.fapi.getLink(type=stObj.typename, objectid=stObj.objectid)#';
 
 	    (function() {
