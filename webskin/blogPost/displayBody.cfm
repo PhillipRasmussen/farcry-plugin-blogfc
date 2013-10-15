@@ -13,9 +13,8 @@
 	<h1><a href="#application.fapi.getLink(typename="blogPost", objectid=stObj.objectid)#">#stObj.title#</a></h1>
 	<p class="blog-byline">
 		<i class="icon-time icon-fixed-width"></i> #lsDateFormat(stObj.posteddatetime, "d mmmm yyyy")# #lsTimeFormat(stObj.posteddatetime, "h:mm tt")#
-		<cfif len(authorName)>
-			by #authorName#<br>			
-		</cfif>
+		<cfif len(authorName)>by #authorName#</cfif>
+		<br>
 		<cfif qCategories.recordCount>
 			<i class="icon-tag icon-fixed-width"></i> 
 			<cfloop query="qCategories">
