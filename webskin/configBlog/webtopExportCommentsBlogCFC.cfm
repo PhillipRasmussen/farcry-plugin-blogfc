@@ -86,7 +86,7 @@
 
 <cfoutput>
 
-<h1><i class="icon-upload-alt"></i> Export Comments from BlogCFC</h1>
+<h1><i class="fa fa-upload"></i> Export Comments from BlogCFC</h1>
 
 <p class="muted">You can use this tool to export your old comments from a Blog CFC database.</p>
 

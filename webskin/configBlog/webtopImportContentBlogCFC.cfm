@@ -97,7 +97,7 @@
 
 <cfoutput>
 
-<h1><i class="icon-download-alt"></i> Import Content from BlogCFC</h1>
+<h1><i class="fa fa-download"></i> Import Content from BlogCFC</h1>
 
 <p class="muted">You can use this tool to import your old content from a Blog CFC database.</p>
 
