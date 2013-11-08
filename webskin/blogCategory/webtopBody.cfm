@@ -6,6 +6,7 @@
 <ft:objectAdmin
 	typename="#stObj.name#"
 	columnList="label"
+	numitems="100"
 	sortableColumns="label"
 	lFilterFields="label"
 	sqlOrderBy="label ASC" />
