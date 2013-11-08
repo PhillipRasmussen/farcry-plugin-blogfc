@@ -10,7 +10,7 @@
 <cfoutput>
 	<cfloop query="qBlogPosts" endrow="#numBlogPosts#">
 		<section>
-			<skin:view typename="blogPost" objectid="#qBlogPosts.objectid#" webskin="displayBody" showComments="false" />
+			<skin:view typename="blogPost" objectid="#qBlogPosts.objectid#" webskin="displayBody" bDetail="false" />
 		</section>
 	</cfloop>
 </cfoutput>

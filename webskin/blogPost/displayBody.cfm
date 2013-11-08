@@ -4,7 +4,7 @@
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 
-<cfparam name="stParam.showComments" default="true">
+<cfparam name="stParam.bDetail" default="true">
 
 <cfset qCategories = application.fapi.getContentObjects(typename="blogCategory", lProperties="objectid,title", objectid_IN=arrayToList(stObj.aCategories), orderby="label ASC")>
 <cfset authorName = application.fapi.getConfig("blogfc", "author")>
@@ -28,11 +28,17 @@
 		</cfif>
 	</p>
 	<div class="content blog-content">
-		<cfif structKeyExists(stObj, "body") AND len(stObj.body)>
-			#stObj.body#
-		</cfif>
+		#stObj.body#
 	</div>
-	<cfif stParam.showComments>
+	<cfif stParam.bDetail>
+		<cfif arrayLen(stObj.aRelated)>
+			<h3>Related Blog Posts</h3>
+			<ul class="blog-related">
+				<cfloop from="1" to="#arrayLen(stObj.aRelated)#" index="i">
+					<li><skin:buildlink typename="blogPost" objectid="#stObj.aRelated[i]#" /></li>
+				</cfloop>
+			</ul>
+		</cfif>
 		<div class="blog-comments">
 			<skin:view stObject="#stObj#" webskin="displayComments" />
 		</div>
