@@ -21,7 +21,7 @@
 <rss version="2.0">
 <channel>
 <title>#xmlFormat(application.fapi.getConfig("general", "sitetitle"))#</title>
-<link>#xmlFormat(application.fc.lib.canonical.getCanonicalBaseURL() & application.fapi.getConfig("blogfc", "urlStem"))#</link>
+<link>#xmlFormat(application.fc.lib.seo.getCanonicalBaseURL() & application.fapi.getConfig("blogfc", "urlStem"))#</link>
 <description/>
 <language>en-us</language>
 <pubDate>#xmlFormat(dateFormat(dateConvert("local2utc", now()), dateMask) & " " & timeFormat(dateConvert("local2utc", now()), timeMask))# +0000</pubDate>
@@ -37,13 +37,13 @@
 
 		<item>
 		<title>#xmlFormat(stBlogPost.title)#</title>
-		<link>#xmlFormat(application.fc.lib.canonical.getCanonicalURL(stObject=stBlogPost))#</link>
+		<link>#xmlFormat(application.fc.lib.seo.getCanonicalURL(stObject=stBlogPost))#</link>
 		<description>#xmlFormat(stBlogPost.body)#</description>
 		<cfloop query="qCategories">
 			<category>#xmlFormat(qCategories.title)#</category>		
 		</cfloop>
 		<pubDate>#xmlFormat(dateFormat(dateConvert("local2utc", stBlogPost.posteddatetime), dateMask) & " " & timeFormat(dateConvert("local2utc", stBlogPost.posteddatetime), timeMask))# +0000</pubDate>
-		<guid>#xmlFormat(application.fc.lib.canonical.getCanonicalURL(stObject=stBlogPost))#</guid>
+		<guid>#xmlFormat(application.fc.lib.seo.getCanonicalURL(stObject=stBlogPost))#</guid>
 		</item>
 
 		<cfset count = count + 1>
