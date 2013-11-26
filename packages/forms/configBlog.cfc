@@ -2,23 +2,24 @@
 	key="blogfc" hint="Configure settings for the Blog plugin">
 
 	<cfproperty name="author" type="string" required="false"
-		ftSeq="1" ftWizardStep="" ftFieldset="General Settings" ftLabel="Author Name"
+		ftSeq="1" ftFieldset="General Settings" ftLabel="Author Name"
+		ftType="string"
 		ftHint="The author name that will appear in the 'by line' of each blog post. Leave blank to hide the author name.">
 
 	<cfproperty name="urlStem" type="string" required="false" default="/blog"
-		ftSeq="2" ftWizardStep="" ftFieldset="General Settings" ftLabel="URL Stem"
-		ftValidation="required"
+		ftSeq="2" ftFieldset="General Settings" ftLabel="URL Stem"
+		ftType="string" ftValidation="required"
 		ftHint="The URL stem that all blog post and blog category URLs will begin with, including the leading slash. e.g: /blog">
 
 	<cfproperty name="numBlogPosts" type="integer" required="false" default="10"
-		ftSeq="3" ftWizardStep="" ftFieldset="General Settings" ftLabel="Posts per Page"
+		ftSeq="3" ftFieldset="General Settings" ftLabel="Posts per Page"
 		ftType="integer" ftDefault="10" ftValidation="required number"
 		ftHint="The number of blog posts to show per page.">
 
 	<cfproperty name="disqusShortname" type="string" required="false" default=""
-		ftSeq="10" ftWizardStep="" ftFieldset="Disqus Comments" ftLabel="Disqus Shortname"
-		ftType="string" 
-		ftHint="The &quot;shortname&quot; of the site you have created in <a target='_blank' href='http://disqus.com'>Disqus</a> to use for blog comment integration.">
+		ftSeq="10" ftFieldset="Disqus Comments" ftLabel="Disqus Shortname"
+		ftType="string"
+		ftHint="The 'shortname' of the site you have created in <a target='_blank' href='http://disqus.com'>Disqus</a> to use for blog comment integration.">
 
 
 	<cfscript>
