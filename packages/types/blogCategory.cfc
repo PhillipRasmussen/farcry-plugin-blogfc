@@ -2,7 +2,7 @@
 	bFriendly="true">
 
 	<cfproperty name="title" type="string" required="false"
-		ftSeq="1" ftWizardStep="" ftFieldset="Category" ftLabel="Title">
+		ftSeq="1" ftFieldset="Category" ftLabel="Title">
 
 	<cfproperty name="alias" type="string" required="false" default=""
 		hint="The old friendly URL alias used by BlogCFC">
