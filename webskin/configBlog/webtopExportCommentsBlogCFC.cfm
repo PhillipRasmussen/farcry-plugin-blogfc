@@ -46,7 +46,7 @@
 					AND (subscribeonly = 0 OR subscribeonly IS NULL)
 				ORDER BY posted ASC
 			</cfquery>
-			<cfset link = oEnv.getCanonicalURL() & application.fapi.getLink(type="blogPost", objectid=qBlogPosts.objectid)>
+			<cfset link = application.fc.lib.seo.getCanonicalURL(type="blogPost", objectid=qBlogPosts.objectid)>
 			<item>
 				<title>#xmlFormat(qBlogPosts.title)#</title>
 				<link>#xmlFormat(link)#</link>

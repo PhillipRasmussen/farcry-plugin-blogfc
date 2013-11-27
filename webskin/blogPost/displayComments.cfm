@@ -13,7 +13,7 @@
 	    var disqus_shortname = '#application.fapi.getConfig("blogfc", "disqusShortname")#';
 	    var disqus_identifier = '#stObj.objectid#';
 	    var disqus_title = '#urlEncodedFormat(stObj.title)#';
-	    var disqus_url = '#oEnv.getCanonicalURL()##application.fapi.getLink(type=stObj.typename, objectid=stObj.objectid)#';
+	    var disqus_url = '#application.fc.lib.seo.getCanonicalURL(stObject=stObj)#';
 
 	    (function() {
 	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
