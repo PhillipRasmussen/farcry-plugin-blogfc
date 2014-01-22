@@ -9,7 +9,6 @@
 
 <cfparam name="url.catid" default="">
 
-<cfset oEnv = application.fapi.getContentType(typename="configEnvironment")>
 <cfset qBlogPosts = application.fapi.getContentObjects(typename="blogPost", orderby="posteddatetime DESC")>
 
 <cfset dateMask = "ddd, dd mmm yyyy">

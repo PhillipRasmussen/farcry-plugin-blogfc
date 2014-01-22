@@ -6,8 +6,8 @@
 
 <cfparam name="stParam.bDetail" default="true">
 
-<cfset qCategories = application.fapi.getContentObjects(typename="blogCategory", lProperties="objectid,title", objectid_IN=arrayToList(stObj.aCategories), orderby="label ASC")>
 <cfset authorName = application.fapi.getConfig("blogfc", "author")>
+<cfset qCategories = application.fapi.getContentObjects(typename="blogCategory", lProperties="objectid,title", objectid_IN=arrayToList(stObj.aCategories), orderby="label ASC")>
 
 <cfoutput>
 	<h1><a href="#application.fapi.getLink(typename="blogPost", objectid=stObj.objectid)#">#stObj.title#</a></h1>
