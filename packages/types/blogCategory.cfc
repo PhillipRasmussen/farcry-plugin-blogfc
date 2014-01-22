@@ -1,5 +1,5 @@
 <cfcomponent displayName="Blog Category" extends="farcry.core.packages.types.types"
-	bFriendly="true">
+	bFriendly="true" bObjectBroker="true">
 
 	<cfproperty name="title" type="string" required="false"
 		ftSeq="1" ftFieldset="Category" ftLabel="Title">
