@@ -4,7 +4,7 @@
 <cfimport taglib="/farcry/core/tags/formtools" prefix="ft">
 
 <ft:objectAdmin
-	typename="#stObj.name#"
+	typename="blogCategory"
 	columnList="label"
 	numitems="100"
 	sortableColumns="label"

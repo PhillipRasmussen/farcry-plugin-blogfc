@@ -4,11 +4,11 @@
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 
-<cfset qBlogPosts = getBlogPostsByCategory(stObj.objectid)>
-<cfset numBlogPosts = application.fapi.getConfig("blogfc", "numBlogPosts")>
+<cfset numBlogPosts = application.fapi.getConfig("blogfc", "numBlogPosts", 10)>
+<cfset qBlogPosts = getBlogPostsByCategory(stObj.objectid, numBlogPosts)>
 
 <cfoutput>
-	<cfloop query="qBlogPosts" endrow="#numBlogPosts#">
+	<cfloop query="qBlogPosts">
 		<section>
 			<skin:view typename="blogPost" objectid="#qBlogPosts.objectid#" webskin="displayBody" bDetail="false" />
 		</section>
