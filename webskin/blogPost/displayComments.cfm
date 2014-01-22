@@ -4,13 +4,13 @@
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 
-<cfset oEnv = application.fapi.getContentType(typename="configEnvironment")>
+<cfset disqusShortname = application.fapi.getConfig("blogfc", "disqusShortname")>
 
-<cfif len(application.fapi.getConfig("blogfc", "disqusShortname"))>
+<cfif len(disqusShortname)>
 <cfoutput>
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
-	    var disqus_shortname = '#application.fapi.getConfig("blogfc", "disqusShortname")#';
+	    var disqus_shortname = '#disqusShortname#';
 	    var disqus_identifier = '#stObj.objectid#';
 	    var disqus_title = '#urlEncodedFormat(stObj.title)#';
 	    var disqus_url = '#application.fc.lib.seo.getCanonicalURL(stObject=stObj)#';
