@@ -16,10 +16,16 @@
 
 	<cfproperty name="body" type="longchar" required="false"
 		ftSeq="4" ftFieldset="Content" ftLabel="Body" 
-		ftType="richtext">
+		ftType="richtext" ftTemplateTypeList="dmImage,dmFile,dmNavigation,dmHTML"
+		ftImageArrayField="aAttachments" ftImageTypename="dmImage" ftImageField="StandardImage">
+
+	<cfproperty name="aAttachments" type="array" required="false"
+		ftSeq="5" ftFieldset="Content" ftLabel="Attached Images / Files"
+		ftType="array" ftJoin="dmImage,dmFile"
+		ftAllowEdit="true" ftAllowBulkUpload="true">
 
 	<cfproperty name="aRelated" type="array" required="false"
-		ftSeq="5" ftFieldset="Relationships" ftLabel="Related Blog Posts"
+		ftSeq="6" ftFieldset="Relationships" ftLabel="Related Blog Posts"
 		ftType="array" ftJoin="blogPost" ftLibraryDataSQLOrderBy="posteddatetime DESC">
 
 	<cfproperty name="views" type="integer" required="false" default=""
